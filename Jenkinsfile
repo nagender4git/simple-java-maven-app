@@ -7,9 +7,18 @@ pipeline {
   }
   stages {
     stage('Hello') {
-      steps {
-        powershell(script: 'echo " Hello Naga "', returnStdout: true)
-        sh 'echo "Nee PEru"'
+      parallel {
+        stage('Hello') {
+          steps {
+            powershell(script: 'echo " Hello Naga "', returnStdout: true)
+            sh 'echo "Nee PEru"'
+          }
+        }
+        stage('display') {
+          steps {
+            dir(path: '/')
+          }
+        }
       }
     }
   }
