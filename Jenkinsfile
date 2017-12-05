@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'yum install -y openjdk java'
+        sh 'yum install -y openjdk'
       }
     }
   }
