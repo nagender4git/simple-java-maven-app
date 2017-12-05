@@ -24,5 +24,10 @@ mvn test
         sh './jenkins/scripts/deliver.sh'
       }
     }
+    stage('') {
+      steps {
+        build 'TestHello'
+      }
+    }
   }
 }
