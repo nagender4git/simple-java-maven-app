@@ -6,17 +6,17 @@ pipeline {
     
   }
   stages {
-    stage('Initialize') {
-      steps {
-        sh 'echo "Nee PEru"'
-      }
-    }
     stage('Build') {
       steps {
         sh '''mvn -Dmaven.test.failure.ignore=true install
 mvn test
 
 '''
+      }
+    }
+    stage('Test') {
+      steps {
+        sh 'mvn test'
       }
     }
     stage('Deliver') {
