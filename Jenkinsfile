@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        tool(name: 'maven', type: 'build')
+        sh 'yum install -y openjdk maven3.3.9'
       }
     }
   }
