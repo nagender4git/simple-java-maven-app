@@ -15,6 +15,9 @@ pipeline {
       steps {
         sh '''echo "PATH = ${PATH}"
 echo "M2_HOME = ${M2_HOME}"
+mvn -Dmaven.test.failure.ignore=true install
+echo "PATH = ${PATH}"
+echo "M2_HOME = ${M2_HOME}"
 '''
       }
     }
