@@ -13,8 +13,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh '''echo $MAVEN_HOME
- echo "PATH = ${PATH}"
+        sh '''echo "PATH = ${PATH}"
 echo "M2_HOME = ${M2_HOME}"
 '''
       }
