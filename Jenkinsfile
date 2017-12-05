@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
-        powershell(script: 'echo " Hello Naga "', returnStdout: true)
         sh 'echo "Nee PEru"'
       }
     }
