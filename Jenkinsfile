@@ -15,7 +15,7 @@ pipeline {
       steps {
         sh '''echo $MAVEN_HOME
 mvn -Dmaven.test.failure.ignore=true install
-mvn build run'''
+'''
       }
     }
   }
