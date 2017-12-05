@@ -17,5 +17,10 @@ pipeline {
 mvn -Dmaven.test.failure.ignore=true install'''
       }
     }
+    stage('Run') {
+      steps {
+        sh 'mvn run'
+      }
+    }
   }
 }
