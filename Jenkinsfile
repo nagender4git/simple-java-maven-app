@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'mvn clean build'
+        tool(name: 'maven', type: 'build')
       }
     }
   }
