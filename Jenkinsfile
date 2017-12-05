@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'centos'
+      image 'maven3.5'
     }
     
   }
@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'yum install -y java'
+        sh 'echo $MAVEN_HOME'
       }
     }
   }
