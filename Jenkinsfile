@@ -13,9 +13,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh '''echo "PATH = ${PATH}"
-echo "M2_HOME = ${M2_HOME}"
-mvn -Dmaven.test.failure.ignore=true install
+        sh '''mvn -Dmaven.test.failure.ignore=true install
 mvn test
 
 '''
