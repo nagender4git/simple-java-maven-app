@@ -6,9 +6,14 @@ pipeline {
     
   }
   stages {
-    stage('Hello') {
+    stage('Initialize') {
       steps {
         sh 'echo "Nee PEru"'
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'mvn clean build'
       }
     }
   }
